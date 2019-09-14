@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     @BindView(R.id.button1)
     Button button1;
+    @BindView(R.id.help_me_decide_btn)
+    Button helpMeDecideBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, PickMyMoodActivity.class));
 
+    }
+
+    @OnClick(R.id.help_me_decide_btn)
+    public void onClick_helpMe() {
+
+        startActivity(new Intent(this, HelpMeDecideActivity.class));
     }
 }
