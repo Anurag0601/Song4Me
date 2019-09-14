@@ -1,5 +1,6 @@
 package com.song4me;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick() {
         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_LONG).show();
 
-    textView.setText("This is a new message.");
+        startActivity(new Intent(this, PickMyMoodActivity.class));
+
     }
 }
