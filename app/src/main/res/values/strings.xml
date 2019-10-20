@@ -4,8 +4,9 @@
 
     <string-array name="moodsArrayList">
         <item>Happy</item>
-        <item>Feeling down</item>
+        <item>Mellow</item>
         <item>Pumped</item>
         <item>Feeling like a snacc</item>
+        <item>Energize</item>
     </string-array>
 </resources>

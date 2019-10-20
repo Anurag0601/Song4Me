@@ -8,6 +8,7 @@
 
     <com.camerakit.CameraKitView
         android:id="@+id/cameraKitView"
+        app:camera_facing="front"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
