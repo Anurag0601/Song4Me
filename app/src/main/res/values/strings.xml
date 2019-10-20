@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Song 4 Me</string>
+
+
+    <string-array name="moodsArrayList">
+        <item>Happy</item>
+        <item>Feeling down</item>
+        <item>Pumped</item>
+        <item>Feeling like a snacc</item>
+    </string-array>
 </resources>

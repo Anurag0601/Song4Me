@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClick() {
         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_LONG).show();
 
-        startActivity(new Intent(this, PickMyMoodActivity.class));
+        startActivity(new Intent(this, HelpMeDecideActivity.class));
 
     }
 
     @OnClick(R.id.help_me_decide_btn)
     public void onClick_helpMe() {
 
-        startActivity(new Intent(this, HelpMeDecideActivity.class));
+        startActivity(new Intent(this, PickMyMoodActivity.class));
     }
 }
