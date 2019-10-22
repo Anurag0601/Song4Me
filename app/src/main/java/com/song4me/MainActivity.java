@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick() {
         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_LONG).show();
 
-        startActivity(new Intent(this, HelpMeDecideActivity.class));
+        //startActivity(new Intent(this, HelpMeDecideActivity.class));
 
     }
 
@@ -40,5 +40,12 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_helpMe() {
 
         startActivity(new Intent(this, PickMyMoodActivity.class));
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        finishAffinity();
     }
 }
