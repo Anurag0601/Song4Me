@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpMeDecideActivity"></activity>
+        <activity android:name=".HelpMeDecideActivity">
+            <intent-filter>
+                <data android:scheme="com.song4me" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
         <activity android:name=".PickMyMoodActivity" />
         <activity android:name=".Loginactivity">
             <intent-filter>
@@ -22,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>
