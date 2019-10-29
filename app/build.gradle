@@ -41,6 +41,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision:24.0.0'
     implementation 'com.google.firebase:firebase-ml-vision-face-model:19.0.0'
 
+    //Spotify
+    implementation project(':spotify-app-remote')
+    implementation "com.google.code.gson:gson:2.8.5"
+
     //CameraKit
     implementation 'com.camerakit:camerakit:1.0.0-beta3.11'
     implementation 'com.camerakit:jpegkit:0.1.0'

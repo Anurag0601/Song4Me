@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.textView)
     TextView textView;
-    @BindView(R.id.button1)
-    Button button1;
+    @BindView(R.id.pickMood_button)
+    Button pickMood_button;
     @BindView(R.id.help_me_decide_btn)
     Button helpMeDecideBtn;
     @BindView(R.id.toolbar)
@@ -50,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    @OnClick(R.id.button1)
+    @OnClick(R.id.pickMood_button)
     public void onClick() {
         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_LONG).show();
 
-        //startActivity(new Intent(this, HelpMeDecideActivity.class));
+        startActivity(new Intent(this, HelpMeDecideActivity.class));
 
     }
 
