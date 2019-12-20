@@ -19,6 +19,8 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.List;
 
 import butterknife.BindView;
@@ -33,6 +35,8 @@ public class PickMyMoodActivity extends AppCompatActivity {
     @BindView(R.id.cameraKitView)
     CameraKitView cameraKitView;
     private String TAG = "PickMyMood";
+
+    double smilingProbability, leftEyeOpenProbability, rightEyeOpenProbability;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +92,26 @@ public class PickMyMoodActivity extends AppCompatActivity {
                                         Log.d(TAG, "Smiling Prob ["+face.getSmilingProbability()+"]");
                                         Log.d(TAG, "Left eye open ["+face.getLeftEyeOpenProbability()+"]");
                                         Log.d(TAG, "Right eye open ["+face.getRightEyeOpenProbability()+"]");
+
+                                        smilingProbability = face.getSmilingProbability();
+                                        leftEyeOpenProbability = face.getLeftEyeOpenProbability();
+                                        rightEyeOpenProbability = face.getRightEyeOpenProbability();
+
+                                        BigDecimal b1 = new BigDecimal(smilingProbability);
+                                        MathContext m1 = new MathContext(4);
+
+                                        BigDecimal b2 = b1.round(m1);
+
+                                        Log.d(TAG, "onSuccess: BIG DECIMAL : " + b2.floatValue());
+                                        if (b2.doubleValue() > 0.7000) {
+                                            Toast.makeText(PickMyMoodActivity.this, "HAPPY AF!", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        if (b2.floatValue() > 0.2000 && b2.floatValue() < 0.7000) {
+                                            Toast.makeText(PickMyMoodActivity.this, "Semma sad!", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        finish();
 
                                     }
                                 }
